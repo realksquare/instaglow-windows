@@ -125,10 +125,11 @@
             <div class="hero-card">
                 <p class="hero-card-title">Quick Consultation</p>
                 <p class="hero-card-subtitle">Our local experts call you back - usually within the hour.</p>
-                <form id="heroCallbackForm" class="quick-form">
-                    <input type="text"  placeholder="Your Full Name"   required class="form-input" id="heroName">
-                    <input type="tel"   placeholder="Your Phone Number" required class="form-input" id="heroPhone">
-                    <select class="form-input" id="heroInterest">
+                <form id="heroCallbackForm" class="quick-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="1a49eb5a-9f52-4731-b3dc-c1abf123cfb6">
+                    <input type="text"  placeholder="Your Full Name"   required class="form-input" id="heroName" name="name">
+                    <input type="tel"   placeholder="Your Phone Number" required class="form-input" id="heroPhone" name="phone">
+                    <select class="form-input" id="heroInterest" name="interest">
                         <option value="" disabled selected>I'm interested in...</option>
                         <option>Windows</option>
                         <option>Composite Doors</option>
@@ -664,23 +665,24 @@
                     <h3>Request Your Free Quote</h3>
                     <p>We'll be in touch within 24 hours</p>
                 </div>
-                <form id="mainQuoteForm" class="quote-form">
+                <form id="mainQuoteForm" class="quote-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="1a49eb5a-9f52-4731-b3dc-c1abf123cfb6">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" required class="form-control" placeholder="John Smith">
+                            <input type="text" id="name" name="name" required class="form-control" placeholder="John Smith">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" required class="form-control" placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required class="form-control" placeholder="john@example.com">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" required class="form-control" placeholder="07700 000000">
+                            <input type="tel" id="phone" name="phone" required class="form-control" placeholder="07700 000000">
                         </div>
                         <div class="form-group">
                             <label for="material">Frame Material</label>
-                            <select id="material" class="form-control">
+                            <select id="material" name="material" class="form-control">
                                 <option value="upvc">uPVC</option>
                                 <option value="aluminium">Slimline Aluminium</option>
                                 <option value="composite">Reinforced Composite</option>
@@ -690,7 +692,7 @@
                         </div>
                         <div class="form-group full">
                             <label for="product">Product(s) Needed</label>
-                            <select id="product" class="form-control">
+                            <select id="product" name="product" class="form-control">
                                 <option value="windows">Windows</option>
                                 <option value="modern-doors">Modern Entrance Doors</option>
                                 <option value="composite-doors">Composite Doors</option>
@@ -701,7 +703,7 @@
                         </div>
                         <div class="form-group full">
                             <label for="message">Project Details</label>
-                            <textarea id="message" rows="4" placeholder="Tell us about your project - number of windows, door styles, any special requirements..." class="form-control"></textarea>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project - number of windows, door styles, any special requirements..." class="form-control"></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">

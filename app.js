@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ----------------------------------------------- */
     const FORM_CONFIG = {
         endpoint: 'https://api.web3forms.com/submit',
-        accessKey: 'YOUR_ACCESS_KEY_HERE', // Replace with free key from web3forms.com
+        accessKey: '1a49eb5a-9f52-4731-b3dc-c1abf123cfb6',
         recipientEmail: 'meeran@instaglowwindows.co.uk',
         phone: '07988 570856'
     };
