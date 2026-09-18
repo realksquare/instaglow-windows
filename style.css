@@ -607,6 +607,174 @@ h1,h2,h3,h4,h5,h6 {
 .feature-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
 
 /* ============================================================
+   GLAZING TECHNOLOGY & THERMAL EFFICIENCY
+   ============================================================ */
+.glazing-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%);
+    position: relative;
+    border-top: 1px solid var(--border);
+}
+.glazing-header {
+    text-align: center;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.glazing-header .section-label {
+    margin: 0 auto 16px auto;
+}
+.glazing-header p {
+    margin: 0 auto;
+}
+
+.glazing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.glazing-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 36px 28px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.35s var(--ease);
+    display: flex;
+    flex-direction: column;
+}
+.glazing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(21,87,212,0.3);
+}
+.glazing-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 28px; right: 28px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-blue), var(--accent));
+    border-radius: 0 0 3px 3px;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease);
+}
+.glazing-card:hover::after {
+    opacity: 1;
+}
+
+.glazing-num {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: rgba(21,87,212,0.12);
+    line-height: 1;
+}
+
+.glazing-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(21,87,212,0.08), rgba(56,189,248,0.08));
+    border: 1px solid rgba(21,87,212,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.3s var(--ease);
+}
+.glazing-card:hover .glazing-icon {
+    background: linear-gradient(135deg, var(--brand-blue), var(--accent));
+    transform: scale(1.05);
+}
+.glazing-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--brand-blue);
+    transition: color 0.3s var(--ease);
+}
+.glazing-card:hover .glazing-icon svg {
+    color: var(--white);
+}
+
+.glazing-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+.glazing-card p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-top: auto;
+}
+
+/* Glazing Banner */
+.glazing-banner {
+    background: linear-gradient(135deg, var(--ink) 0%, #0c1a40 100%);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: var(--radius-lg);
+    padding: 36px 44px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+.glazing-banner::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(56,189,248,0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+.glazing-banner-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--brand-blue), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    box-shadow: 0 8px 24px rgba(21,87,212,0.4);
+}
+.glazing-banner-icon svg {
+    width: 28px;
+    height: 28px;
+}
+.glazing-banner-content {
+    flex: 1;
+}
+.glazing-banner-content h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+.glazing-banner-content p {
+    font-size: 0.96rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.65;
+    margin: 0;
+}
+.glazing-banner-action {
+    flex-shrink: 0;
+}
+
+/* ============================================================
    PRODUCT SHOWCASE
    ============================================================ */
 .showcase-section {
@@ -1523,6 +1691,7 @@ textarea.form-control { resize: vertical; min-height: 110px; }
     .hero-container { grid-template-columns: 1fr; gap: 60px; }
     .hero-card { max-width: 500px; }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .glazing-grid { grid-template-columns: repeat(2, 1fr); }
     .showcase-grid { grid-template-columns: 1fr; gap: 48px; }
     .quote-container { grid-template-columns: 1fr; gap: 60px; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1561,6 +1730,10 @@ textarea.form-control { resize: vertical; min-height: 110px; }
     .hero-stats { gap: 28px; flex-wrap: wrap; }
 
     .features-grid { grid-template-columns: 1fr; gap: 2px; }
+    .glazing-grid { grid-template-columns: 1fr; gap: 16px; }
+    .glazing-banner { flex-direction: column; text-align: center; padding: 32px 24px; gap: 20px; }
+    .glazing-banner-action { width: 100%; }
+    .glazing-banner-action .btn { width: 100%; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .tabs-nav { width: 100%; justify-content: flex-start; border-radius: 12px; }
 
