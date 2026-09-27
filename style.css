@@ -15,11 +15,13 @@
     --accent-glow:   #fbbf24;
     --gold:          #f59e0b;
     --white:         #ffffff;
-    --off-white:     #fcfbf8;
-    --light-bg:      #f6f8fb;
-    --text:          #1f2937;
-    --muted:         #64748b;
-    --border:        #e2e8f0;
+    --surface-bg:    #f2f4f8;
+    --surface-card:  #ffffff;
+    --off-white:     #eaedf4;
+    --light-bg:      #eaedf4;
+    --text:          #0f172a;
+    --muted:         #475569;
+    --border:        #d7dce6;
     --border-dark:   rgba(255,255,255,0.10);
 
     --glass-bg:      rgba(255,255,255,0.06);
@@ -52,7 +54,7 @@ body {
     font-family: var(--font-body);
     font-size: 16px;
     color: var(--text);
-    background: var(--white);
+    background: var(--surface-bg);
     line-height: 1.65;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -192,7 +194,7 @@ h1,h2,h3,h4,h5,h6 {
    HEADER / NAV
    ============================================================ */
 .main-header {
-    background: rgba(255,255,255,0.92);
+    background: rgba(242, 244, 248, 0.94);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
@@ -511,7 +513,7 @@ h1,h2,h3,h4,h5,h6 {
    ============================================================ */
 .features-section {
     padding: 120px 0;
-    background: var(--white);
+    background: var(--surface-bg);
     position: relative;
     overflow: hidden;
 }
@@ -549,14 +551,14 @@ h1,h2,h3,h4,h5,h6 {
     overflow: hidden;
 }
 .feature-card {
-    background: var(--white);
+    background: var(--surface-card);
     padding: 48px 40px;
     position: relative;
     overflow: hidden;
     transition: background 0.3s var(--ease);
 }
 .feature-card:hover {
-    background: var(--off-white);
+    background: var(--surface-bg);
 }
 .feature-card::after {
     content: '';
@@ -601,7 +603,7 @@ h1,h2,h3,h4,h5,h6 {
    ============================================================ */
 .glazing-section {
     padding: 120px 0;
-    background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%);
+    background: linear-gradient(180deg, var(--surface-bg) 0%, var(--light-bg) 100%);
     position: relative;
     border-top: 1px solid var(--border);
 }
@@ -627,7 +629,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .glazing-card {
-    background: var(--white);
+    background: var(--surface-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: 36px 28px;
@@ -1136,7 +1138,7 @@ h1,h2,h3,h4,h5,h6 {
    ============================================================ */
 .quote-section {
     padding: 120px 0;
-    background: var(--white);
+    background: var(--surface-bg);
     position: relative;
 }
 .quote-section::before {
@@ -1223,7 +1225,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Form card */
 .quote-card {
-    background: var(--white);
+    background: var(--surface-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: 52px;
@@ -1261,7 +1263,7 @@ h1,h2,h3,h4,h5,h6 {
 .form-control {
     padding: 13px 18px;
     border: 1.5px solid var(--border);
-    background: var(--off-white);
+    background: var(--surface-bg);
     border-radius: var(--radius-sm);
     font-family: var(--font-body);
     font-size: 0.93rem;
@@ -1698,7 +1700,7 @@ textarea.form-control { resize: vertical; min-height: 110px; }
         position: absolute;
         top: 100%;
         left: 0; right: 0;
-        background: var(--white);
+        background: var(--surface-card);
         flex-direction: column;
         padding: 20px;
         gap: 16px;
@@ -1714,7 +1716,6 @@ textarea.form-control { resize: vertical; min-height: 110px; }
     .btn-nav { width: 100%; text-align: center; }
 
     .top-bar-content { flex-direction: column; text-align: center; gap: 6px; }
-    .top-info { justify-content: center; }
 
     .hero-container { padding: 80px 20px; }
     .hero-stats { gap: 28px; flex-wrap: wrap; }
