@@ -177,25 +177,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 .top-bar-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    text-align: center;
 }
-.top-info { display: flex; gap: 28px; flex-wrap: wrap; }
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-.contact-link svg { width: 15px; height: 15px; }
-.contact-link:hover { color: var(--accent); }
 .top-tagline {
     font-weight: 600;
     letter-spacing: 0.5px;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.7);
 }
 
 /* ============================================================
